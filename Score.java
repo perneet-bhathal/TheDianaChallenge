@@ -5,18 +5,22 @@ import java.awt.Font;
 public class Score{
   private int s;
 
+  // sets score to zero initially
   public Score(){
     s = 0;
   }
 
+  // increases score by one
   public void incScore(){
     s++;
   }
 
+  // returns the score variable
   public int getScore(){
     return s;
   }
 
+  // displays the score onto the window
   public void scoreDisplay(Graphics window){
     String score = "Score: " + getScore();
     window.setFont(new Font("TAHOMA", Font.BOLD, 13));
@@ -25,16 +29,10 @@ public class Score{
     window.setColor(Color.WHITE);
   }
 
+  // clears the score on the window and resets to zero
   public void scoreClearNotOverlap(Graphics window){
     String score = "Score: " + getScore();
-    //window.setFont(new Font("TAHOMA", Font.ITALIC, 20));
     window.setColor(Color.WHITE);
     window.drawString(score, 200,300);
   }
-
-  /*public void draw(Graphics window){
-    window.setColor(Color.BLACK);
-    window.setFont(new Font("TAHOMA", Font.BOLD, 28));
-    window.drawString("" + s, 10, 30);
-  }*/
 }
