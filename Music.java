@@ -19,7 +19,7 @@ public class Music {
       }
 
       else {
-        System.out.println("File does not exist");
+        System.out.println("The spice.wav audio does not exist");
       }
     }
 
